@@ -1,9 +1,8 @@
-module fir_param #
+module uvfilter #
   (
     parameter integer C_S00_AXIS_TDATA_WIDTH  = 32,
     parameter integer C_M00_AXIS_TDATA_WIDTH  = 32,
-    parameter integer NUM_COEFFS = 15,
-    parameter logic [NUM_COEFFS*8-1:0] COEFFS = {8'd254, 8'd253, 8'd252, 8'd0, 8'd9, 8'd21, 8'd32, 8'd36, 8'd32, 8'd21, 8'd9, 8'd0, 8'd252, 8'd253, 8'd254} // 256 - abs(num) for negative numbers
+    parameter integer NUM_COEFFS = 15
   )
   (
   // Ports of Axi Slave Bus Interface S00_AXIS
